@@ -1,0 +1,399 @@
+/* Pixel font for body */
+body, h1, h2, h3, p, li, span, button {
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* DejaVu Sans for headings & section titles */
+h2, h3, h4, .resume-left h4, .resume-right h4 {
+  font-family: "DejaVu Sans", sans-serif;
+}
+
+/* Body Background */
+body {
+  background: #000 url("assets/back.png") repeat;
+  background-size: auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(to right, #ffffff, #8b5cf6, #6366f1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  width: 100%;
+  max-width: 1400px;
+  border: 4px solid #534646;
+  padding: 20px;
+  background: rgba(0,0,0,0.5); 
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Works Section */
+.works {
+  padding: 120px 40px;
+}
+
+.works h2 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'DejaVu Sans', sans-serif; /* Web-safe font */
+}
+
+.work-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: row; /* Image left, text right */
+  align-items: center;
+  background: rgba(17,17,17,0.95);
+  border: 1px solid #333;
+  border-radius: 16px;
+  width: 800px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #9d00f8;
+}
+
+.work-card img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-right: 2px solid #333;
+}
+
+.work-info {
+  padding: 20px 25px;
+  flex: 1;
+}
+
+.work-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'DejaVu Sans', sans-serif;
+}
+
+.work-info p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  font-family: 'DejaVu Sans', sans-serif;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  .work-card {
+    flex-direction: column; /* Stack on mobile */
+    width: 100%;
+  }
+
+  .work-card img {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #333;
+  }
+
+  .work-info {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+
+/* About Me Section */
+.about-me {
+  padding: 120px 40px;
+  font-family: 'DejaVu Sans', sans-serif;
+}
+
+.about-me h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-card {
+  background: rgba(17,17,17,0.95);
+  padding: 25px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: scale(2.05);
+  box-shadow: 0 0 25px #c300ff;
+}
+
+/* Resume Frame */
+.resume-frame {
+  background: rgba(12,12,12,0.95);
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: 40px;
+}
+
+.resume-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.resume-left, .resume-right {
+  flex: 1;
+  min-width: 320px;
+}
+
+.resume-header {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.resume-header img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #bb6c67;
+}
+
+.resume-left h4, .resume-right h4 {
+  color: #48ec48;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-size: 1.4rem;
+}
+
+.resume-left p, .resume-right p, .resume-left li, .resume-right li {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Hide resume initially */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .resume-grid {
+    flex-direction: column;
+  }
+
+  .about-card {
+    font-size: 1rem;
+  }
+  /* Portfolio Image Section */
+.portfolio-image {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  text-align: center; /* Fallback for older browsers */
+}
+
+.portfolio-image img.responsive-image {
+  max-width: 800px; /* Limits image width */
+  width: 100%; /* Makes it responsive */
+  height: auto;
+  border-radius: 16px;
+  border: 4px solid #534646;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.portfolio-image img.responsive-image:hover {
+  transform: scale(1.05); /* Hover zoom effect */
+}
+
+}
+
+
+
+/* IOT CARD ONLY */
+.iot-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* PROJECT IMAGES CONTAINER */
+.iot-projects {
+  position: absolute;
+  right: -220px; /* hidden by default */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 12px;
+  transition: right 0.4s ease;
+}
+
+/* SHOW ON HOVER */
+.iot-card:hover .iot-projects {
+  right: 20px;
+}
+
+/* PROJECT IMAGES STYLE */
+.iot-projects img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* rounded like clock */
+  object-fit: cover;
+  border: 2px solid #ec4899;
+  background: #000;
+  box-shadow: 0 0 15px rgba(236,72,153,0.6);
+  transition: transform 0.3s;
+}
+
+/* SMALL POP EFFECT */
+.iot-projects img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Card container */
+.hover-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sliding images */
+.hover-projects {
+  position: absolute;
+  right: -240px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 12px;
+  transition: right 0.4s ease;
+}
+
+/* Show on hover */
+.hover-card:hover .hover-projects {
+  right: 20px;
+}
+
+/* Rounded thumbnails */
+.hover-projects img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ec4899;
+  background: #000;
+  box-shadow: 0 0 15px rgba(236,72,153,0.6);
+  transition: transform 0.3s;
+}
+
+/* Hover zoom */
+.hover-projects img:hover {
+  transform: scale(1.12);
+}
+
+
+/* Base thumbnail – SQUARE */
+.hover-projects img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px; /* slight corner, NOT circle */
+  object-fit: cover;
+  border: 2px solid #242222;
+  background: #000;
+  box-shadow: 0 0 15px rgba(248, 24, 24, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* ZOOM EFFECT */
+.hover-projects img:hover {
+  transform: scale(2.35);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  z-index: 10;
+}
+
+
+.running-text {
+  width: 200%;
+  /*background: #111; /* dark background */
+  overflow: hidden;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: 'DejaVu Sans', sans-serif; /* or your chosen font */
+  font-size: 1.2rem;
+  color: #ec4899; /* gradient possible with more CSS */
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/* Responsive */
+@media(max-width: 768px){
+  body { font-size: 16px; }
+  .resume-grid {
+    flex-direction: column;
+  }
+  .hero, .works, .about-me {
+    padding: 60px 20px;
+  }
+  .work-card h3 { font-size: 1.3rem; }
+  .work-card p { font-size: 0.95rem; }
+  .about-card { font-size: 1rem; }
+}
